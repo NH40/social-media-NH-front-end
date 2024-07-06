@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	color: #efeff3;
+	background: linear-gradient(to top right, #0f0104, #0c173b), #0f0104;
+	position: relative;
+}
+
+h1 {
+	@apply text-4xl font-bold;
+}
+
+input:-webkit-autofill {
+	transition-delay: 9999s;
+	transition-property: background-color;
+}
+
+.animation-slide-fade {
+	animation: slideFade 0.7s;
+}
+
+@keyframes slideFade {
+	from {
+		transform: translateY(-22px);
+		opacity: 0.4;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
